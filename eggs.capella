@@ -55,6 +55,8 @@
             id="20cd7d84-f9e9-4837-aba4-4c1b1ffe64cf" name="Обработка данных измерений"/>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
             id="95f8f5ed-d0ac-4c2a-b73b-aa7bb88c8cbb" name="Отображение данных для оператора"/>
+        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
+            id="895a03cf-1c3a-424a-8841-807157dec9de" name="TEST"/>
       </ownedAbstractCapabilityPkg>
       <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
           id="aef66855-c435-48cd-aba4-ad8ff59dcfb0" name="Interfaces"/>
