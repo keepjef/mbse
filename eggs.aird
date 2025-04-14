@@ -36,7 +36,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/oa.odesign#//@ownedViewpoints[name='Operational%20Analysis']/@ownedRepresentations[name='Operational%20Entity%20Blank']"/>
         <target xmi:type="org.polarsys.capella.core.data.oa:EntityPkg" href="eggs.capella#895218d8-93cd-47a5-b918-019906905c83"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_b18OMBkaEfCTAuW2U1QO5w" name="[OAIB] Root Operational Activity" repPath="#_b17AEBkaEfCTAuW2U1QO5w" changeId="1744630339087">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_b18OMBkaEfCTAuW2U1QO5w" name="[OAIB] Root Operational Activity" repPath="#_b17AEBkaEfCTAuW2U1QO5w" changeId="1744639596305">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/oa.odesign#//@ownedViewpoints[name='Operational%20Analysis']/@ownedRepresentations[name='Operational%20Activity%20Interaction%20Blank']"/>
         <target xmi:type="org.polarsys.capella.core.data.oa:OperationalActivity" href="eggs.capella#58bf5f11-0614-4d2f-b25a-e54744e1709e"/>
       </ownedRepresentationDescriptors>
@@ -852,7 +852,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_hGjMNhkaEfCTAuW2U1QO5w"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_hGjMMRkaEfCTAuW2U1QO5w" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hGjMMhkaEfCTAuW2U1QO5w" x="270" y="430" width="211" height="81"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hGjMMhkaEfCTAuW2U1QO5w" x="270" y="460" width="211" height="81"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_XoSskBkbEfCTAuW2U1QO5w" type="2002" element="_XoL-4BkbEfCTAuW2U1QO5w">
           <children xmi:type="notation:Node" xmi:id="_XoSskxkbEfCTAuW2U1QO5w" type="5006"/>
@@ -934,17 +934,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_yMYu8BkeEfCTAuW2U1QO5w" type="4001" element="_yMQMEBkeEfCTAuW2U1QO5w" source="_hGjMMBkaEfCTAuW2U1QO5w" target="_XoSskBkbEfCTAuW2U1QO5w">
           <children xmi:type="notation:Node" xmi:id="_yMYu9BkeEfCTAuW2U1QO5w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yMYu9RkeEfCTAuW2U1QO5w" x="-2" y="-11"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yMYu9RkeEfCTAuW2U1QO5w" x="-4" y="-9"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_yMYu9hkeEfCTAuW2U1QO5w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yMYu9xkeEfCTAuW2U1QO5w" x="-1" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yMYu9xkeEfCTAuW2U1QO5w" y="6"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_yMYu-BkeEfCTAuW2U1QO5w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yMYu-RkeEfCTAuW2U1QO5w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yMYu-RkeEfCTAuW2U1QO5w" x="3" y="6"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_yMYu8RkeEfCTAuW2U1QO5w" jumpLinkStatus="Above" jumpLinkType="Tunnel"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_yMYu8hkeEfCTAuW2U1QO5w" fontColor="16777215" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yMYu8xkeEfCTAuW2U1QO5w" points="[0, 0, -248, -10]$[248, 10, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yMYu8xkeEfCTAuW2U1QO5w" points="[0, 0, -248, 20]$[248, -20, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yMYu-hkeEfCTAuW2U1QO5w" id="(1.0,0.5063291139240507)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yMYu-xkeEfCTAuW2U1QO5w" id="(0.0,0.38961038961038963)"/>
         </edges>
