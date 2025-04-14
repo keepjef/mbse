@@ -43,7 +43,12 @@
       <ownedFunctionPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalActivityPkg"
           id="1abbdffe-8a58-42fd-bc34-e2c6e2cf1c3f" name="Operational Activities">
         <ownedOperationalActivities xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-            id="58bf5f11-0614-4d2f-b25a-e54744e1709e" name="Root Operational Activity"/>
+            id="58bf5f11-0614-4d2f-b25a-e54744e1709e" name="Root Operational Activity">
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="8a647550-1482-4ea8-9320-3ea2ddb0064e" name="Hey"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="0bf977c7-5eeb-4b53-8f4c-d6c0721d9bc9" name="OperationalActivity 2"/>
+        </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
           id="f91fd8b3-e0dc-4a74-bc3b-7fc2461e4565" name="Operational Capabilities">
@@ -55,8 +60,6 @@
             id="20cd7d84-f9e9-4837-aba4-4c1b1ffe64cf" name="Обработка данных измерений"/>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
             id="95f8f5ed-d0ac-4c2a-b73b-aa7bb88c8cbb" name="Отображение данных для оператора"/>
-        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
-            id="895a03cf-1c3a-424a-8841-807157dec9de" name="TEST"/>
       </ownedAbstractCapabilityPkg>
       <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
           id="aef66855-c435-48cd-aba4-ad8ff59dcfb0" name="Interfaces"/>
