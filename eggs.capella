@@ -48,6 +48,8 @@
               id="8a647550-1482-4ea8-9320-3ea2ddb0064e" name="Hey"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="0bf977c7-5eeb-4b53-8f4c-d6c0721d9bc9" name="fdfdfd"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="9b1340e9-449e-4391-bb30-f2c7d3c7e0c0" name="Hey_1"/>
         </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
