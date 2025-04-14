@@ -47,7 +47,7 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="8a647550-1482-4ea8-9320-3ea2ddb0064e" name="Hey"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="0bf977c7-5eeb-4b53-8f4c-d6c0721d9bc9" name="OperationalActivity 2"/>
+              id="0bf977c7-5eeb-4b53-8f4c-d6c0721d9bc9" name="fdfdfd"/>
         </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
