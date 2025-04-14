@@ -55,13 +55,26 @@
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
           id="f91fd8b3-e0dc-4a74-bc3b-7fc2461e4565" name="Operational Capabilities">
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
-            id="2d9bc427-5077-430d-ab52-c97572957ee5" name="Измерение параметров микроклимата"/>
+            id="2d9bc427-5077-430d-ab52-c97572957ee5" name="Мониторинг параметров микроклимата в инкубаторе">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="8525e9d2-a1c6-40e5-aa3b-b0275b452d62" involved="#607e0f8e-c4cc-4aa8-bb34-13042ebfa306"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="5c2cc247-492b-41a5-8135-8fd3625fd641" involved="#48d529a8-637c-4aa7-84ce-ab583fbe49b1"/>
+        </ownedOperationalCapabilities>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
-            id="a1149a58-1db1-4726-a3bc-0960fc1563de" name="Измерение параметров микроклимата"/>
+            id="20cd7d84-f9e9-4837-aba4-4c1b1ffe64cf" name="Регулирование параметров микроклимата в инкубаторе">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="c476b91d-385a-42ae-a1e4-49104c47f9cb" involved="#607e0f8e-c4cc-4aa8-bb34-13042ebfa306"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="c7190856-c51d-45f1-875e-969893f2db42" involved="#48d529a8-637c-4aa7-84ce-ab583fbe49b1"/>
+        </ownedOperationalCapabilities>
         <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
-            id="20cd7d84-f9e9-4837-aba4-4c1b1ffe64cf" name="Обработка данных измерений"/>
-        <ownedOperationalCapabilities xsi:type="org.polarsys.capella.core.data.oa:OperationalCapability"
-            id="95f8f5ed-d0ac-4c2a-b73b-aa7bb88c8cbb" name="Отображение данных для оператора"/>
+            id="95f8f5ed-d0ac-4c2a-b73b-aa7bb88c8cbb" name="Контроль состояния яиц">
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="5b25a1ff-9857-4706-b5dd-f55a9c6a9fe5" involved="#6ff87eb3-ac08-45a3-b6b6-3c98eb9435d6"/>
+          <ownedEntityOperationalCapabilityInvolvements xsi:type="org.polarsys.capella.core.data.oa:EntityOperationalCapabilityInvolvement"
+              id="3a233f68-6ad3-41fd-8ac0-d7991d36cc0d" involved="#e6a1db71-95ec-4500-8418-8548bcc0cbec"/>
+        </ownedOperationalCapabilities>
       </ownedAbstractCapabilityPkg>
       <ownedInterfacePkg xsi:type="org.polarsys.capella.core.data.cs:InterfacePkg"
           id="aef66855-c435-48cd-aba4-ad8ff59dcfb0" name="Interfaces"/>
@@ -70,7 +83,30 @@
       <ownedRolePkg xsi:type="org.polarsys.capella.core.data.oa:RolePkg" id="0d76d38c-3d2e-4100-9c55-7008d7fe027c"
           name="Roles"/>
       <ownedEntityPkg xsi:type="org.polarsys.capella.core.data.oa:EntityPkg" id="895218d8-93cd-47a5-b918-019906905c83"
-          name="Operational Entities"/>
+          name="Operational Entities">
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="da9fd309-21e3-4550-9be5-b0153d684dc5"
+            name="Инкубаторий" abstractType="#91d1900a-3263-4f48-b694-d85685feb97a"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="dd2a9f40-b93c-47d5-ad64-c5fc1bb5f681"
+            name="Инкубатор" abstractType="#607e0f8e-c4cc-4aa8-bb34-13042ebfa306"/>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="91d1900a-3263-4f48-b694-d85685feb97a"
+            name="Инкубаторий">
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="98440818-3dc0-4f6c-9ef1-7050fc463a9d"
+              name="Оператор" abstractType="#48d529a8-637c-4aa7-84ce-ab583fbe49b1"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="d21d09ab-d387-4a35-9252-a37bf9715170"
+              name="Лаборант" abstractType="#6ff87eb3-ac08-45a3-b6b6-3c98eb9435d6"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="48d529a8-637c-4aa7-84ce-ab583fbe49b1"
+              name="Оператор" actor="true" human="true"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="6ff87eb3-ac08-45a3-b6b6-3c98eb9435d6"
+              name="Лаборант" actor="true" human="true"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="607e0f8e-c4cc-4aa8-bb34-13042ebfa306"
+            name="Инкубатор">
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="46b37cef-191d-4162-baef-6a330f225285"
+              name="Яйца" abstractType="#e6a1db71-95ec-4500-8418-8548bcc0cbec"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="e6a1db71-95ec-4500-8418-8548bcc0cbec"
+              name="Яйца"/>
+        </ownedEntities>
+      </ownedEntityPkg>
     </ownedArchitectures>
     <ownedArchitectures xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis"
         id="e35f1c35-420b-41fd-81b7-4290404f980d" name="System Analysis">
