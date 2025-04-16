@@ -136,15 +136,15 @@
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="96f1305b-1ed6-4d01-9c55-d1336109a079" targetElement="#6e2abe7a-f7fe-40e1-9272-7960e7871b93"
               sourceElement="#607e0f8e-c4cc-4aa8-bb34-13042ebfa306"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="aa714436-e8f6-4b61-af86-6fc413dc08d9" targetElement="#2eca5a43-4222-4a34-8654-b403241838c2"
+              sourceElement="#607e0f8e-c4cc-4aa8-bb34-13042ebfa306"/>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="46b37cef-191d-4162-baef-6a330f225285"
               name="Яйца" abstractType="#e6a1db71-95ec-4500-8418-8548bcc0cbec"/>
           <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="e6a1db71-95ec-4500-8418-8548bcc0cbec"
               name="Яйца">
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="689a8a59-6384-49ae-b03e-1c23b330dad9" targetElement="#f4034e55-8872-4b5b-87f0-fd601084a2f6"
-                sourceElement="#e6a1db71-95ec-4500-8418-8548bcc0cbec"/>
-            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-                id="aa714436-e8f6-4b61-af86-6fc413dc08d9" targetElement="#2eca5a43-4222-4a34-8654-b403241838c2"
                 sourceElement="#e6a1db71-95ec-4500-8418-8548bcc0cbec"/>
           </ownedEntities>
         </ownedEntities>
