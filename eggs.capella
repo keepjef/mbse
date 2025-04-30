@@ -175,9 +175,24 @@
               <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                   id="8c51755c-95fd-45bc-a1c8-4c76f38b2744" name="FOP 4"/>
             </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="8bd6b710-80d7-4a4c-9060-06124a1cc8e3" name="Формирование рекомендаций по корректировке режима инкубации">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="1df5778b-2081-4ab9-884a-dd0eb4debe02" name="FIP 1"/>
+            </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="0f78ac76-388f-4d4c-be7e-3094c9a878e6" name="Предоставление отчета о развитии эмбрионов">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="3dda9075-526c-49f6-9860-7f7a0871bc31" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="cb0be79e-33f1-4bec-8de6-db2f0ee5f7cb" name="FOP 1"/>
+            </ownedFunctions>
             <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
                 id="786dc3cd-3626-4e74-a938-82aa3fdf23df" name="Обработанные данные"
                 target="#7d43ab57-13b9-4cd1-8159-30571b336856" source="#ffaf4363-713d-46a6-bdec-b1b4634c6c4c"/>
+            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+                id="845410fb-8e3d-4c8d-a030-e858da24834f" name="Отчет о развитии эмбрионов"
+                target="#1df5778b-2081-4ab9-884a-dd0eb4debe02" source="#cb0be79e-33f1-4bec-8de6-db2f0ee5f7cb"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="b2b830c4-3e4c-4ff2-a84e-72d71b309eec" name="Регулирование значений параметров микроклимата">
@@ -206,9 +221,43 @@
             </ownedFunctions>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-              id="ec7b9d94-c8d9-4a4e-adef-b57770739eae" name="Сбор данных о состоянии яиц"/>
+              id="ec7b9d94-c8d9-4a4e-adef-b57770739eae" name="Сбор данных о состоянии яиц">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="3a89e8de-e2d2-42e9-adb5-722c8fc1e2a2" name="Проведение овоскопирования">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="2bc537c1-b365-448d-a5d4-7343b396b346" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="b182a91b-7a3a-490e-a00d-ffb2c6555248" name="FOP 1"/>
+            </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="252e9f03-94a3-4c42-8f8e-feca4be6cfbe" name="Обеспечение данными о состоянии яиц">
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="5eff974b-6c7b-48dc-8e1e-35cc99f64cd9" name="FOP 1"/>
+            </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="1f1af072-ded5-4a08-b35b-f4e39e427534" name="Фиксация результатов овоскопирования">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="1b412719-52f4-45ae-a795-7b20adca07fc" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="fc276c2b-ccd1-421c-95be-8b0690c626f2" name="FOP 1"/>
+            </ownedFunctions>
+            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+                id="8250e80c-9cd9-4b85-8bec-617293a0d027" name="Данные о состоянии яиц"
+                target="#2bc537c1-b365-448d-a5d4-7343b396b346" source="#5eff974b-6c7b-48dc-8e1e-35cc99f64cd9"/>
+            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+                id="a9af53b2-ee7c-4ac5-a227-dc8e1877b736" name="Данные об овоскопировании"
+                target="#1b412719-52f4-45ae-a795-7b20adca07fc" source="#b182a91b-7a3a-490e-a00d-ffb2c6555248"/>
+          </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-              id="41bc59ce-b5ae-4c49-a423-925bfa41e112" name="Анализ текущего состояния яиц"/>
+              id="41bc59ce-b5ae-4c49-a423-925bfa41e112" name="Анализ текущего состояния яиц">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="1e9fab0e-cb90-414c-af78-40b2cc56faf2" name="Анализ результатов овоскопирования">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="49b3035c-a525-497e-a048-011785bc14c3" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="ff0050c1-77dd-493c-8b15-8f4ae1fb6a56" name="FOP 1"/>
+            </ownedFunctions>
+          </ownedFunctions>
           <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
               id="fa940fa9-1396-4003-822f-0bd67a584af2" targetElement="#58bf5f11-0614-4d2f-b25a-e54744e1709e"
               sourceElement="#79caf117-72e9-43c9-bb0c-194377e10dec"/>
@@ -227,6 +276,12 @@
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="8739ecc6-7407-4a51-b005-6e6b6a062e56" name="Сигнал на изм. вентиляции"
               target="#55324386-b7e8-4509-9b48-1f9967df66d5" source="#8c51755c-95fd-45bc-a1c8-4c76f38b2744"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="ce51c7c2-bbce-459c-a28e-7e8d63285794" name="Результаты овоскопирования"
+              target="#49b3035c-a525-497e-a048-011785bc14c3" source="#fc276c2b-ccd1-421c-95be-8b0690c626f2"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="f126cb65-3e44-4d47-b2c6-d464e450e5f2" name="Результаты анализа"
+              target="#3dda9075-526c-49f6-9860-7f7a0871bc31" source="#ff0050c1-77dd-493c-8b15-8f4ae1fb6a56"/>
         </ownedSystemFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg"
