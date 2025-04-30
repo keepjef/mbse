@@ -56,6 +56,8 @@
               id="56d409bd-a120-45c7-b267-c8bd26dcc471" name="Анализ текущего состояния яиц"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="2eca5a43-4222-4a34-8654-b403241838c2" name="Поворот яиц"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="aca1a0cb-39cb-4e8c-bc7b-c03fb9076695" name="Предоставление данных ..."/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="e09c96e2-6889-46ec-b9be-46ec163aebc1" name="Данные о состоянии яиц"
               target="#56d409bd-a120-45c7-b267-c8bd26dcc471" source="#f4034e55-8872-4b5b-87f0-fd601084a2f6"/>
@@ -96,6 +98,10 @@
           name="Operational Entities">
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="da9fd309-21e3-4550-9be5-b0153d684dc5"
             name="Отдел выводка цыплят" abstractType="#91d1900a-3263-4f48-b694-d85685feb97a"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="b729550d-3c3f-4283-913e-3b9b849d0279"
+            name="Яйца" abstractType="#36d8865f-c74f-4a85-842c-977c6af5b826"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="1f1518f9-8356-4d34-94f6-6343a1770408"
+            name="Инкубатор" abstractType="#b60ab98e-1ff9-401f-bbba-ac0f63ec3e39"/>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="91d1900a-3263-4f48-b694-d85685feb97a"
             name="Отдел выводка цыплят">
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="98440818-3dc0-4f6c-9ef1-7050fc463a9d"
@@ -127,6 +133,14 @@
                 sourceElement="#6ff87eb3-ac08-45a3-b6b6-3c98eb9435d6"/>
           </ownedEntities>
         </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="36d8865f-c74f-4a85-842c-977c6af5b826"
+            name="Яйца" actor="true" human="true">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="9a4b8cf1-8622-49b5-9c11-7c75fe5a8897" targetElement="#aca1a0cb-39cb-4e8c-bc7b-c03fb9076695"
+              sourceElement="#36d8865f-c74f-4a85-842c-977c6af5b826"/>
+        </ownedEntities>
+        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="b60ab98e-1ff9-401f-bbba-ac0f63ec3e39"
+            name="Инкубатор"/>
       </ownedEntityPkg>
     </ownedArchitectures>
     <ownedArchitectures xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis"
