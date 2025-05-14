@@ -57,7 +57,9 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="2eca5a43-4222-4a34-8654-b403241838c2" name="Поворот яиц"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="aca1a0cb-39cb-4e8c-bc7b-c03fb9076695" name="Предоставление данных ..."/>
+              id="aca1a0cb-39cb-4e8c-bc7b-c03fb9076695" name="Предоставление данных о состоянии"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="553cb0a6-430f-4c8e-873d-d589cbf100a0" name="Предоставление данных о микроклимате"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="e09c96e2-6889-46ec-b9be-46ec163aebc1" name="Данные о состоянии яиц"
               target="#56d409bd-a120-45c7-b267-c8bd26dcc471" source="#f4034e55-8872-4b5b-87f0-fd601084a2f6"/>
@@ -65,7 +67,7 @@
               id="b6220590-1117-4028-83fb-47f3efa29973" name="Информация о текущей стадии инкубации яиц"
               target="#37c83b8d-1c35-4928-8be6-802e208d11c1" source="#56d409bd-a120-45c7-b267-c8bd26dcc471"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-              id="d053bab5-1eb3-45be-8c7f-a8dcde0363fe" name="Данные о микроклимате"
+              id="d053bab5-1eb3-45be-8c7f-a8dcde0363fe" name="Данные о микроклимате в инкубаторе"
               target="#37c83b8d-1c35-4928-8be6-802e208d11c1" source="#06f6d50d-aa00-4049-901d-6291009685db"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="03706e4f-339d-457b-8b18-62ec93291d6f" name="Параметры микроклимата"
@@ -73,6 +75,12 @@
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="1bda18ef-9a74-41f0-96b9-8756e43d2461" name="Сигнал о повороте" target="#2eca5a43-4222-4a34-8654-b403241838c2"
               source="#37c83b8d-1c35-4928-8be6-802e208d11c1"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="65ac84d2-8665-407d-b75b-7fd4d7a77208" name="Данные о микроклимате"
+              target="#06f6d50d-aa00-4049-901d-6291009685db" source="#553cb0a6-430f-4c8e-873d-d589cbf100a0"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="393da653-8440-4db3-919e-64e24bd52ffa" name="Данные о состоянии"
+              target="#f4034e55-8872-4b5b-87f0-fd601084a2f6" source="#aca1a0cb-39cb-4e8c-bc7b-c03fb9076695"/>
         </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
@@ -98,8 +106,6 @@
           name="Operational Entities">
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="da9fd309-21e3-4550-9be5-b0153d684dc5"
             name="Отдел выводка цыплят" abstractType="#91d1900a-3263-4f48-b694-d85685feb97a"/>
-        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="b729550d-3c3f-4283-913e-3b9b849d0279"
-            name="Яйца" abstractType="#36d8865f-c74f-4a85-842c-977c6af5b826"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="1f1518f9-8356-4d34-94f6-6343a1770408"
             name="Инкубатор" abstractType="#b60ab98e-1ff9-401f-bbba-ac0f63ec3e39"/>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="91d1900a-3263-4f48-b694-d85685feb97a"
@@ -133,14 +139,20 @@
                 sourceElement="#6ff87eb3-ac08-45a3-b6b6-3c98eb9435d6"/>
           </ownedEntities>
         </ownedEntities>
-        <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="36d8865f-c74f-4a85-842c-977c6af5b826"
-            name="Яйца" actor="true" human="true">
-          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-              id="9a4b8cf1-8622-49b5-9c11-7c75fe5a8897" targetElement="#aca1a0cb-39cb-4e8c-bc7b-c03fb9076695"
-              sourceElement="#36d8865f-c74f-4a85-842c-977c6af5b826"/>
-        </ownedEntities>
         <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="b60ab98e-1ff9-401f-bbba-ac0f63ec3e39"
-            name="Инкубатор"/>
+            name="Инкубатор">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="003d85c7-dd7b-4d3f-b9ae-2e3ab50434f3" targetElement="#553cb0a6-430f-4c8e-873d-d589cbf100a0"
+              sourceElement="#b60ab98e-1ff9-401f-bbba-ac0f63ec3e39"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="b729550d-3c3f-4283-913e-3b9b849d0279"
+              name="Яйца" abstractType="#36d8865f-c74f-4a85-842c-977c6af5b826"/>
+          <ownedEntities xsi:type="org.polarsys.capella.core.data.oa:Entity" id="36d8865f-c74f-4a85-842c-977c6af5b826"
+              name="Яйца" actor="true" human="true">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="9a4b8cf1-8622-49b5-9c11-7c75fe5a8897" targetElement="#aca1a0cb-39cb-4e8c-bc7b-c03fb9076695"
+                sourceElement="#36d8865f-c74f-4a85-842c-977c6af5b826"/>
+          </ownedEntities>
+        </ownedEntities>
       </ownedEntityPkg>
     </ownedArchitectures>
     <ownedArchitectures xsi:type="org.polarsys.capella.core.data.ctx:SystemAnalysis"
@@ -152,20 +164,12 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="7c64dd9b-505f-4ef9-8769-162551aacfd1" name="Сбор данных о микроклимате в инкубаторе">
             <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-                id="fdcc1ed5-3c1f-4593-88b5-15db2f5e0fbb" name="Обеспечение данными о параметрах микроклимата">
-              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                  id="6ccd0582-c3be-4445-90ff-a28446b24e8e" name="FOP 1"/>
-            </ownedFunctions>
-            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
                 id="b5e34335-055e-430e-bb18-c7ce7b2e363a" name="Сбор данных о параметрах микроклимата">
               <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
                   id="11a17f13-9697-4447-907c-2020b75ddaa5" name="FIP 1"/>
               <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                   id="9de8984b-824a-419e-8814-df2f1ceb9731" name="FOP 1"/>
             </ownedFunctions>
-            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-                id="d8a47aa2-1701-4cb0-bbbb-4501ab999a94" name="Данные о микроклимате"
-                target="#11a17f13-9697-4447-907c-2020b75ddaa5" source="#6ccd0582-c3be-4445-90ff-a28446b24e8e"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="bc721aa4-45cf-4910-87b2-ff2fdd73bcf8" name="Компарирование данных со стандартами">
@@ -244,20 +248,12 @@
                   id="b182a91b-7a3a-490e-a00d-ffb2c6555248" name="FOP 1"/>
             </ownedFunctions>
             <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
-                id="252e9f03-94a3-4c42-8f8e-feca4be6cfbe" name="Обеспечение данными о состоянии яиц">
-              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                  id="5eff974b-6c7b-48dc-8e1e-35cc99f64cd9" name="FOP 1"/>
-            </ownedFunctions>
-            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
                 id="1f1af072-ded5-4a08-b35b-f4e39e427534" name="Фиксация результатов овоскопирования">
               <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
                   id="1b412719-52f4-45ae-a795-7b20adca07fc" name="FIP 1"/>
               <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                   id="fc276c2b-ccd1-421c-95be-8b0690c626f2" name="FOP 1"/>
             </ownedFunctions>
-            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
-                id="8250e80c-9cd9-4b85-8bec-617293a0d027" name="Данные о состоянии яиц"
-                target="#2bc537c1-b365-448d-a5d4-7343b396b346" source="#5eff974b-6c7b-48dc-8e1e-35cc99f64cd9"/>
             <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
                 id="a9af53b2-ee7c-4ac5-a227-dc8e1877b736" name="Данные об овоскопировании"
                 target="#1b412719-52f4-45ae-a795-7b20adca07fc" source="#b182a91b-7a3a-490e-a00d-ffb2c6555248"/>
@@ -270,6 +266,22 @@
                   id="49b3035c-a525-497e-a048-011785bc14c3" name="FIP 1"/>
               <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                   id="ff0050c1-77dd-493c-8b15-8f4ae1fb6a56" name="FOP 1"/>
+            </ownedFunctions>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="04b4e376-f2cf-4e46-b665-510e6917eb58" name="Предоставление данных о микроклимате">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="fdcc1ed5-3c1f-4593-88b5-15db2f5e0fbb" name="Обеспечение данными о параметрах микроклимата">
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="6ccd0582-c3be-4445-90ff-a28446b24e8e" name="FOP 1"/>
+            </ownedFunctions>
+          </ownedFunctions>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+              id="9e7273d8-7231-4610-9e03-dcca14d8bfb7" name="Предоставление данных о состоянии">
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="252e9f03-94a3-4c42-8f8e-feca4be6cfbe" name="Обеспечение данными о состоянии яиц">
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="5eff974b-6c7b-48dc-8e1e-35cc99f64cd9" name="FOP 1"/>
             </ownedFunctions>
           </ownedFunctions>
           <ownedFunctionRealizations xsi:type="org.polarsys.capella.core.data.fa:FunctionRealization"
@@ -296,6 +308,12 @@
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="f126cb65-3e44-4d47-b2c6-d464e450e5f2" name="Результаты анализа"
               target="#3dda9075-526c-49f6-9860-7f7a0871bc31" source="#ff0050c1-77dd-493c-8b15-8f4ae1fb6a56"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="d8a47aa2-1701-4cb0-bbbb-4501ab999a94" name="Данные о микроклимате"
+              target="#11a17f13-9697-4447-907c-2020b75ddaa5" source="#6ccd0582-c3be-4445-90ff-a28446b24e8e"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="8250e80c-9cd9-4b85-8bec-617293a0d027" name="Данные о состоянии яиц"
+              target="#2bc537c1-b365-448d-a5d4-7343b396b346" source="#5eff974b-6c7b-48dc-8e1e-35cc99f64cd9"/>
         </ownedSystemFunctions>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.ctx:CapabilityPkg"
@@ -405,6 +423,8 @@
             name="Оператор" abstractType="#dba03a6e-5a2d-42a6-8b32-e6f4e88c4d92"/>
         <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="f3fbae23-b7af-4289-ba39-538aedd4ed31"
             name="Лаборант" abstractType="#b469fb6b-46a1-48e2-aa18-b80fc22ec5e1"/>
+        <ownedParts xsi:type="org.polarsys.capella.core.data.cs:Part" id="62bad740-98fa-4080-bb85-f0db2e44336a"
+            name="Инкубатор" abstractType="#324f1c28-62f3-45b6-a778-d5fb0c2929f2"/>
         <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
             id="cc9f3cc8-16fe-4d7b-b482-8b448c535241" name="Информационный поток"
             source="#44a6c20c-f8db-4edc-a204-64173d44de17" target="#05fd94b1-06db-4a1c-acff-ebda6ff3e220"
@@ -413,11 +433,12 @@
             id="61ba3957-8af0-4219-9b78-11dec84ee089" name="Информационный поток"
             source="#f117674b-6c36-43aa-ba79-b3cf5fc371f7" target="#94bb167b-82ed-44d9-b813-19a01401ab05"
             kind="FLOW"/>
+        <ownedComponentExchanges xsi:type="org.polarsys.capella.core.data.fa:ComponentExchange"
+            id="feee17aa-1f53-4e33-aeb1-c1cf136eda0c" name="Информационный поток"
+            source="#2f0c19fe-fb90-4ad0-af61-5e059d1af47b" target="#328b4537-3ab9-415e-aa9c-5f24fd881e27"
+            kind="FLOW"/>
         <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
             id="36e03698-8608-4111-955f-ae8d020bec75" name="System">
-          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-              id="7e3dcd8a-3683-4db1-bb95-6f8ef46ec6f5" targetElement="#fdcc1ed5-3c1f-4593-88b5-15db2f5e0fbb"
-              sourceElement="#36e03698-8608-4111-955f-ae8d020bec75"/>
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="2acf0a84-0468-4d6f-9b1b-1be79f9f78de" targetElement="#b5e34335-055e-430e-bb18-c7ce7b2e363a"
               sourceElement="#36e03698-8608-4111-955f-ae8d020bec75"/>
@@ -436,9 +457,6 @@
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="35fab823-b374-4335-bad8-b94258457a08" targetElement="#a66acac6-2397-4b8b-ab58-6be348b12f91"
               sourceElement="#36e03698-8608-4111-955f-ae8d020bec75"/>
-          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
-              id="db18ed95-bb9e-4830-91b5-9b1ccd8bd7ed" targetElement="#252e9f03-94a3-4c42-8f8e-feca4be6cfbe"
-              sourceElement="#36e03698-8608-4111-955f-ae8d020bec75"/>
           <ownedStateMachines xsi:type="org.polarsys.capella.core.data.capellacommon:StateMachine"
               id="63bf47f1-b106-4ca9-8f18-bad87c1b47fc" name="System State Machine">
             <ownedRegions xsi:type="org.polarsys.capella.core.data.capellacommon:Region"
@@ -452,11 +470,11 @@
                 sourceElement="#44a6c20c-f8db-4edc-a204-64173d44de17"/>
           </ownedFeatures>
           <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
-              id="f117674b-6c36-43aa-ba79-b3cf5fc371f7" name="CP 3" orientation="OUT"
+              id="328b4537-3ab9-415e-aa9c-5f24fd881e27" name="CP 2" orientation="IN"
               kind="FLOW">
             <ownedPortAllocations xsi:type="org.polarsys.capella.core.data.information:PortAllocation"
-                id="06a79699-2581-4852-9325-9cd053ed19b2" targetElement="#5eff974b-6c7b-48dc-8e1e-35cc99f64cd9"
-                sourceElement="#f117674b-6c36-43aa-ba79-b3cf5fc371f7"/>
+                id="5dc13973-3c7b-4f34-9ef3-a2128acbbb63" targetElement="#11a17f13-9697-4447-907c-2020b75ddaa5"
+                sourceElement="#328b4537-3ab9-415e-aa9c-5f24fd881e27"/>
           </ownedFeatures>
         </ownedSystemComponents>
         <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
@@ -498,6 +516,34 @@
                 id="38c7a4c9-608d-4425-b961-8d8ada064cf6" targetElement="#2bc537c1-b365-448d-a5d4-7343b396b346"
                 sourceElement="#94bb167b-82ed-44d9-b813-19a01401ab05"/>
           </ownedFeatures>
+        </ownedSystemComponents>
+        <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
+            id="324f1c28-62f3-45b6-a778-d5fb0c2929f2" name="Инкубатор" actor="true">
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="7e3dcd8a-3683-4db1-bb95-6f8ef46ec6f5" targetElement="#fdcc1ed5-3c1f-4593-88b5-15db2f5e0fbb"
+              sourceElement="#324f1c28-62f3-45b6-a778-d5fb0c2929f2"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.cs:Part" id="07c5e40f-8aea-4e8b-9f60-67ebbe2414f7"
+              name="Яйца" abstractType="#fe93be82-58b3-4505-8cb4-f43b285d170e"/>
+          <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+              id="2f0c19fe-fb90-4ad0-af61-5e059d1af47b" name="CP 2" orientation="OUT"
+              kind="FLOW">
+            <ownedPortAllocations xsi:type="org.polarsys.capella.core.data.information:PortAllocation"
+                id="8b96cddf-77e9-4df6-8188-17c7c1e57353" targetElement="#6ccd0582-c3be-4445-90ff-a28446b24e8e"
+                sourceElement="#2f0c19fe-fb90-4ad0-af61-5e059d1af47b"/>
+          </ownedFeatures>
+          <ownedSystemComponents xsi:type="org.polarsys.capella.core.data.ctx:SystemComponent"
+              id="fe93be82-58b3-4505-8cb4-f43b285d170e" name="Яйца" actor="true" human="true">
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="db18ed95-bb9e-4830-91b5-9b1ccd8bd7ed" targetElement="#252e9f03-94a3-4c42-8f8e-feca4be6cfbe"
+                sourceElement="#fe93be82-58b3-4505-8cb4-f43b285d170e"/>
+            <ownedFeatures xsi:type="org.polarsys.capella.core.data.fa:ComponentPort"
+                id="f117674b-6c36-43aa-ba79-b3cf5fc371f7" name="CP 3" orientation="OUT"
+                kind="FLOW">
+              <ownedPortAllocations xsi:type="org.polarsys.capella.core.data.information:PortAllocation"
+                  id="2239d285-49d6-487d-afde-57d7bcbd7790" targetElement="#5eff974b-6c7b-48dc-8e1e-35cc99f64cd9"
+                  sourceElement="#f117674b-6c36-43aa-ba79-b3cf5fc371f7"/>
+            </ownedFeatures>
+          </ownedSystemComponents>
         </ownedSystemComponents>
       </ownedSystemComponentPkg>
       <ownedMissionPkg xsi:type="org.polarsys.capella.core.data.ctx:MissionPkg" id="64993233-049f-40a5-8b78-02a18dfb156b"
