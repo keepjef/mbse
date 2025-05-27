@@ -60,6 +60,8 @@
               id="aca1a0cb-39cb-4e8c-bc7b-c03fb9076695" name="Предоставление данных о состоянии"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="553cb0a6-430f-4c8e-873d-d589cbf100a0" name="Предоставление данных о микроклимате"/>
+          <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
+              id="6f819ad4-4ecd-4184-900c-8f4b3ce80512" name="Изменение положения"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="e09c96e2-6889-46ec-b9be-46ec163aebc1" name="Данные о состоянии яиц"
               target="#56d409bd-a120-45c7-b267-c8bd26dcc471" source="#f4034e55-8872-4b5b-87f0-fd601084a2f6"/>
@@ -81,6 +83,9 @@
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="393da653-8440-4db3-919e-64e24bd52ffa" name="Данные о состоянии"
               target="#f4034e55-8872-4b5b-87f0-fd601084a2f6" source="#aca1a0cb-39cb-4e8c-bc7b-c03fb9076695"/>
+          <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+              id="b4cc7209-37f4-4d27-831e-0607b415f728" name="Воздействие" target="#6f819ad4-4ecd-4184-900c-8f4b3ce80512"
+              source="#2eca5a43-4222-4a34-8654-b403241838c2"/>
         </ownedOperationalActivities>
       </ownedFunctionPkg>
       <ownedAbstractCapabilityPkg xsi:type="org.polarsys.capella.core.data.oa:OperationalCapabilityPkg"
@@ -150,6 +155,9 @@
               name="Яйца" actor="true" human="true">
             <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
                 id="9a4b8cf1-8622-49b5-9c11-7c75fe5a8897" targetElement="#aca1a0cb-39cb-4e8c-bc7b-c03fb9076695"
+                sourceElement="#36d8865f-c74f-4a85-842c-977c6af5b826"/>
+            <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+                id="76d05b67-e350-4fcb-b540-b79871267cc4" targetElement="#6f819ad4-4ecd-4184-900c-8f4b3ce80512"
                 sourceElement="#36d8865f-c74f-4a85-842c-977c6af5b826"/>
           </ownedEntities>
         </ownedEntities>
