@@ -177,7 +177,17 @@
                   id="11a17f13-9697-4447-907c-2020b75ddaa5" name="FIP 1"/>
               <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                   id="9de8984b-824a-419e-8814-df2f1ceb9731" name="FOP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="1d76e10f-91fc-440b-af9a-e624c094fe5c" name="FOP 2"/>
             </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="b646d89f-1a3a-4024-a80a-7753c803c6b4" name="Внесение параметров микроклимата в журнал">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="0fb9f598-cd19-4579-8f99-a29dc1e87285" name="FIP 1"/>
+            </ownedFunctions>
+            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+                id="0331f5a5-fc63-4df4-912a-6e94483185c9" name="Параметры микроклимата"
+                target="#0fb9f598-cd19-4579-8f99-a29dc1e87285" source="#1d76e10f-91fc-440b-af9a-e624c094fe5c"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="bc721aa4-45cf-4910-87b2-ff2fdd73bcf8" name="Компарирование данных со стандартами">
@@ -195,11 +205,7 @@
               <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                   id="7f0b2298-0426-49f9-99f6-ca9c6ad74922" name="FOP 1"/>
               <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                  id="27b6df47-5d2e-44aa-be99-168057df17d1" name="FOP 2"/>
-              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                  id="0c6a9cc3-e71e-4db8-b7a1-03e33da55026" name="FOP 3"/>
-              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
-                  id="8c51755c-95fd-45bc-a1c8-4c76f38b2744" name="FOP 4"/>
+                  id="7f8f9cd5-63ce-432c-a1d5-afa43e69f95f" name="FOP 2"/>
             </ownedFunctions>
             <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
                 id="8bd6b710-80d7-4a4c-9060-06124a1cc8e3" name="Формирование рекомендаций по корректировке режима инкубации">
@@ -213,12 +219,26 @@
               <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
                   id="cb0be79e-33f1-4bec-8de6-db2f0ee5f7cb" name="FOP 1"/>
             </ownedFunctions>
+            <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
+                id="793800ed-ba33-435e-9c1b-c3f8c9cf43fd" name="Фиксация отклонения параметров за допустимые пределы">
+              <inputs xsi:type="org.polarsys.capella.core.data.fa:FunctionInputPort"
+                  id="f723a91e-4318-4ff2-b9eb-0337c526a9b6" name="FIP 1"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="27b6df47-5d2e-44aa-be99-168057df17d1" name="FOP 2"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="0c6a9cc3-e71e-4db8-b7a1-03e33da55026" name="FOP 3"/>
+              <outputs xsi:type="org.polarsys.capella.core.data.fa:FunctionOutputPort"
+                  id="8c51755c-95fd-45bc-a1c8-4c76f38b2744" name="FOP 4"/>
+            </ownedFunctions>
             <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
                 id="786dc3cd-3626-4e74-a938-82aa3fdf23df" name="Обработанные данные"
                 target="#7d43ab57-13b9-4cd1-8159-30571b336856" source="#ffaf4363-713d-46a6-bdec-b1b4634c6c4c"/>
             <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
                 id="845410fb-8e3d-4c8d-a030-e858da24834f" name="Отчет о развитии эмбрионов"
                 target="#1df5778b-2081-4ab9-884a-dd0eb4debe02" source="#cb0be79e-33f1-4bec-8de6-db2f0ee5f7cb"/>
+            <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
+                id="510870e7-d09d-4baf-bb1b-2730762f9144" name="Результаты сравнения"
+                target="#f723a91e-4318-4ff2-b9eb-0337c526a9b6" source="#7f8f9cd5-63ce-432c-a1d5-afa43e69f95f"/>
           </ownedFunctions>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.ctx:SystemFunction"
               id="b2b830c4-3e4c-4ff2-a84e-72d71b309eec" name="Регулирование значений параметров микроклимата">
@@ -513,6 +533,12 @@
               sourceElement="#36e03698-8608-4111-955f-ae8d020bec75"/>
           <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
               id="35fab823-b374-4335-bad8-b94258457a08" targetElement="#a66acac6-2397-4b8b-ab58-6be348b12f91"
+              sourceElement="#36e03698-8608-4111-955f-ae8d020bec75"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="a496c663-2521-4657-b3cf-0214743ae138" targetElement="#b646d89f-1a3a-4024-a80a-7753c803c6b4"
+              sourceElement="#36e03698-8608-4111-955f-ae8d020bec75"/>
+          <ownedFunctionalAllocation xsi:type="org.polarsys.capella.core.data.fa:ComponentFunctionalAllocation"
+              id="9d6c38cc-79f2-4be0-b4d3-843bb000e7d8" targetElement="#793800ed-ba33-435e-9c1b-c3f8c9cf43fd"
               sourceElement="#36e03698-8608-4111-955f-ae8d020bec75"/>
           <ownedStateMachines xsi:type="org.polarsys.capella.core.data.capellacommon:StateMachine"
               id="63bf47f1-b106-4ca9-8f18-bad87c1b47fc" name="System State Machine">
