@@ -52,7 +52,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/oa.odesign#//@ownedViewpoints[name='Operational%20Analysis']/@ownedRepresentations[name='Operational%20Activity%20Breakdown']"/>
         <target xmi:type="org.polarsys.capella.core.data.oa:OperationalActivity" href="eggs.capella#58bf5f11-0614-4d2f-b25a-e54744e1709e"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_HCH2cBkZEfCTAuW2U1QO5w" name="[OAB] Operational Entities" repPath="#_HCGBQBkZEfCTAuW2U1QO5w" changeId="1748367156408">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_HCH2cBkZEfCTAuW2U1QO5w" name="[OAB] Operational Entities" repPath="#_HCGBQBkZEfCTAuW2U1QO5w" changeId="1749132932616">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/oa.odesign#//@ownedViewpoints[name='Operational%20Analysis']/@ownedRepresentations[name='Operational%20Entity%20Blank']"/>
         <target xmi:type="org.polarsys.capella.core.data.oa:EntityPkg" href="eggs.capella#895218d8-93cd-47a5-b918-019906905c83"/>
       </ownedRepresentationDescriptors>
@@ -774,7 +774,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/oa.odesign#//@ownedViewpoints[name='Operational%20Analysis']/@ownedRepresentations[name='Operational%20Entity%20Blank']/@defaultLayer/@containerMappings[name='OAB_Entity1']/@subNodeMappings[name='OAB_Activity']"/>
         </ownedDiagramElements>
-        <ownedDiagramElements xmi:type="diagram:DNode" uid="_QhcsEBkjEfCTAuW2U1QO5w" name="Регулирование значений параметров микроклимата" outgoingEdges="_jp6S4DseEfCL2enu6ypy-g" incomingEdges="_QhiLpBkjEfCTAuW2U1QO5w" width="7" height="7" resizeKind="NSEW">
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_QhcsEBkjEfCTAuW2U1QO5w" name="Регулирование режима работы инкубатора" outgoingEdges="_jp6S4DseEfCL2enu6ypy-g" incomingEdges="_QhiLpBkjEfCTAuW2U1QO5w" width="7" height="7" resizeKind="NSEW">
           <target xmi:type="org.polarsys.capella.core.data.oa:OperationalActivity" href="eggs.capella#6e2abe7a-f7fe-40e1-9272-7960e7871b93"/>
           <semanticElements xmi:type="org.polarsys.capella.core.data.oa:OperationalActivity" href="eggs.capella#6e2abe7a-f7fe-40e1-9272-7960e7871b93"/>
           <ownedStyle xmi:type="diagram:Square" uid="_QhcsERkjEfCTAuW2U1QO5w" labelColor="91,64,64" borderSize="1" borderSizeComputationExpression="1" borderColor="91,64,64" labelPosition="node" width="-1" height="-1" color="247,218,116">
@@ -854,7 +854,7 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/oa.odesign#//@ownedViewpoints[name='Operational%20Analysis']/@ownedRepresentations[name='Operational%20Entity%20Blank']/@defaultLayer/@containerMappings[name='OAB_Entity1']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/oa.odesign#//@ownedViewpoints[name='Operational%20Analysis']/@ownedRepresentations[name='Operational%20Entity%20Blank']/@defaultLayer/@containerMappings[name='OAB_Entity1']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_8aZCoDCZEfCfFKW45vFTmg" name="Предоставление данных о микроклимате" outgoingEdges="_BGYQoDCaEfCfFKW45vFTmg" width="7" height="7" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_8aZCoDCZEfCfFKW45vFTmg" name="Предоставление данных о текущих значениях параметров микроклимата" outgoingEdges="_BGYQoDCaEfCfFKW45vFTmg" width="7" height="7" resizeKind="NSEW">
         <target xmi:type="org.polarsys.capella.core.data.oa:OperationalActivity" href="eggs.capella#553cb0a6-430f-4c8e-873d-d589cbf100a0"/>
         <semanticElements xmi:type="org.polarsys.capella.core.data.oa:OperationalActivity" href="eggs.capella#553cb0a6-430f-4c8e-873d-d589cbf100a0"/>
         <ownedStyle xmi:type="diagram:Square" uid="_8aZpsDCZEfCfFKW45vFTmg" labelColor="91,64,64" borderSize="1" borderSizeComputationExpression="1" borderColor="91,64,64" labelPosition="node" width="-1" height="-1" color="247,218,116">
@@ -862,7 +862,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.polarsys.capella.core.sirius.analysis/description/oa.odesign#//@ownedViewpoints[name='Operational%20Analysis']/@ownedRepresentations[name='Operational%20Entity%20Blank']/@defaultLayer/@containerMappings[name='OAB_Entity1']/@subNodeMappings[name='OAB_Activity']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_buhwsDseEfCL2enu6ypy-g" name="Изменение микроклимата" incomingEdges="_jp6S4DseEfCL2enu6ypy-g" width="7" height="7" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_buhwsDseEfCL2enu6ypy-g" name="Изменение режима работы" incomingEdges="_jp6S4DseEfCL2enu6ypy-g" width="7" height="7" resizeKind="NSEW">
         <target xmi:type="org.polarsys.capella.core.data.oa:OperationalActivity" href="eggs.capella#54f80dbb-a232-4a65-9560-c3e9de0d64e3"/>
         <semanticElements xmi:type="org.polarsys.capella.core.data.oa:OperationalActivity" href="eggs.capella#54f80dbb-a232-4a65-9560-c3e9de0d64e3"/>
         <ownedStyle xmi:type="diagram:Square" uid="_buiXwDseEfCL2enu6ypy-g" labelColor="91,64,64" borderSize="1" borderSizeComputationExpression="1" borderColor="91,64,64" labelPosition="node" width="-1" height="-1" color="247,218,116">

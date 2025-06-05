@@ -49,7 +49,7 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="37c83b8d-1c35-4928-8be6-802e208d11c1" name="Компарирование данных со стандартами"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="6e2abe7a-f7fe-40e1-9272-7960e7871b93" name="Регулирование значений параметров микроклимата"/>
+              id="6e2abe7a-f7fe-40e1-9272-7960e7871b93" name="Регулирование режима работы инкубатора"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="f4034e55-8872-4b5b-87f0-fd601084a2f6" name="Сбор данных о состоянии яиц"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
@@ -59,9 +59,9 @@
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
               id="aca1a0cb-39cb-4e8c-bc7b-c03fb9076695" name="Предоставление данных о состоянии"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="553cb0a6-430f-4c8e-873d-d589cbf100a0" name="Предоставление данных о микроклимате"/>
+              id="553cb0a6-430f-4c8e-873d-d589cbf100a0" name="Предоставление данных о текущих значениях параметров микроклимата"/>
           <ownedFunctions xsi:type="org.polarsys.capella.core.data.oa:OperationalActivity"
-              id="54f80dbb-a232-4a65-9560-c3e9de0d64e3" name="Изменение микроклимата"/>
+              id="54f80dbb-a232-4a65-9560-c3e9de0d64e3" name="Изменение режима работы"/>
           <ownedFunctionalExchanges xsi:type="org.polarsys.capella.core.data.fa:FunctionalExchange"
               id="e09c96e2-6889-46ec-b9be-46ec163aebc1" name="Данные о состоянии яиц"
               target="#56d409bd-a120-45c7-b267-c8bd26dcc471" source="#f4034e55-8872-4b5b-87f0-fd601084a2f6"/>
